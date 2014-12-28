@@ -1,0 +1,20 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container">	
+		<nav>
+			<div class = "nav navbar-nav pull-left">
+				<%= link_to 'Sample app', '#'%>
+			</div>
+			<div class = "nav navbar-nav pull-right">
+				<%= link_to 'Home ','#'%> &nbsp&nbsp
+				<%= link_to 'Help ', '#'%> &nbsp&nbsp
+				<% if logged_in? %>
+				<%= link_to 'Log out', logout_path, method: 'delete'%> &nbsp&nbsp
+				<% else %>				
+				
+				<%= link_to 'Login', '#'%> &nbsp&nbsp
+				<%= link_to 'Sing up', 'users/new'%> &nbsp&nbsp
+				<% end %>
+			</div>
+		</nav>
+	</div> 
+</header>
